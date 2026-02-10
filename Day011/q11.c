@@ -4,30 +4,26 @@ int main() {
     int m, n;
     scanf("%d %d", &m, &n);
 
-    if (m != n) {
-        printf("Not a Symmetric Matrix\n");
-        return 0;
-    }
+    int a[m][n], b[m][n];
 
-    int matrix[m][n];
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
-            scanf("%d", &matrix[i][j]);
+            scanf("%d", &a[i][j]);
         }
     }
 
-    int flag = 1;
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
-            if (matrix[i][j] != matrix[j][i]) {
-                flag = 0;
-                break;
-            }
+            scanf("%d", &b[i][j]);
         }
     }
 
-    if (flag == 1) printf("Symmetric Matrix\n");
-    else printf("Not a Symmetric Matrix\n");
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            printf("%d ", a[i][j] + b[i][j]);
+        }
+        printf("\n");
+    }
 
     return 0;
 }
