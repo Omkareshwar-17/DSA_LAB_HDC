@@ -33,6 +33,5 @@ int main() {
         temp = temp->next; 
     }
 
- 
-    return 0;
+ return 0;
 }
