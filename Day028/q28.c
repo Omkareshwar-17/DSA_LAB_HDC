@@ -34,6 +34,7 @@ int main() {
         do {
             printf("%d ", temp->data);
             temp = temp->next;
+            
         } while (temp != head);
     }
 
